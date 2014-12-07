@@ -15,7 +15,6 @@ public class MostCharacters {
       return null;
     }
     
-    char MaxArray = CharArray[0];
     for (int k = 0; k < CharArray.length; ++k) {
       if (CharCounter.containsKey(CharArray[k])) {
 	CharCounter.put(CharArray[k], CharCounter.get(CharArray[k])+1 );
@@ -38,7 +37,17 @@ public class MostCharacters {
   }
   
   public static void main(String[] arguments) {
-    String TestString = "My name is Andree, yo, yo, yo, yo!!!!!";
+    String TestString = "My name is Dr. Susanto";
+    
+    ArrayList<Character> MostOccurringCharacters = new ArrayList<Character>();
+    FindMostCharacterInString(TestString);
+    
+    try {
+      FindMostCharacterInString(TestString).size();
+    } catch (Exception e) {
+      System.out.println("Maybe you should pick better string");
+      System.exit(0);
+    }
     System.out.println(FindMostCharacterInString(TestString));
   }
   
