@@ -36,19 +36,5 @@ public class MostCharacters {
     return occurences;
   }
   
-  public static void main(String[] arguments) {
-    String TestString = "My name is Dr. Susanto";
-    
-    ArrayList<Character> MostOccurringCharacters = new ArrayList<Character>();
-    FindMostCharacterInString(TestString);
-    
-    try {
-      FindMostCharacterInString(TestString).size();
-    } catch (Exception e) {
-      System.out.println("Maybe you should pick better string");
-      System.exit(0);
-    }
-    System.out.println(FindMostCharacterInString(TestString));
-  }
   
 }
